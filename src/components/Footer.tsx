@@ -72,7 +72,7 @@ export default function Footer() {
   return (
     <footer className="shrink-0" id="contact">
       <div className="border-l h-full w-px border-neutral-300 border-dashed absolute top-0 bottom-0" />
-      <div className="pl-8 pr-40 flex gap-24 items-start h-full">
+      <div className="pl-8 pr-8 md:pr-40 flex gap-24 items-start h-full">
         <BracketText
           position="before:bottom-2 after:top-2"
           className="[writing-mode:vertical-lr] rotate-180"
@@ -86,7 +86,7 @@ export default function Footer() {
             <div className="h-px bg-black w-16" />
             <p>REN</p>
           </div>
-          <p className="font-sans text-sm max-w-md text-neutral-500">
+          <p className="font-sans text-sm max-w-xs md:max-w-md text-neutral-500">
             Have questions? Want to chat? I&apos;m just an email away! Let&apos;s connect
             and see how we can build something amazing together. Whether you
             have a project in mind or just want to talk tech, I&apos;m always up for

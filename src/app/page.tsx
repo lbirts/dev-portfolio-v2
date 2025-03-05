@@ -14,17 +14,17 @@ export default function Home() {
   return (
     <HorizontalScroll>
       {/* About Section */}
-      <div className="flex flex-col justify-between pr-52 shrink-0">
+      <div className="flex flex-col justify-between pr-24 md:pr-52 shrink-0">
         <div className="space-y-3">
           <p className="text-2xl">LAUREN BIRTS</p>
-          <p className="font-sans text-sm max-w-lg text-neutral-500">
+          <p className="font-sans text-sm max-w-xs md:max-w-lg text-neutral-500">
             I&apos;m a senior software engineer with extensive experience building
             innovative, user-focused applications across multiple platforms. I
             specialize in performance optimization while balancing technical
             elegance with pragmatic delivery. My background spans full-stack
             development, mobile engineering, and blockchain systems.
           </p>
-          <p className="font-sans text-sm max-w-lg text-neutral-500">
+          <p className="font-sans text-sm max-w-xs md:max-w-lg text-neutral-500">
             I&apos;m passionate about creating secure, accessible technology and
             continuously expanding my technical toolkit to deliver impactful
             solutions. I&apos;ve focused on transforming complex technical challenges
@@ -41,7 +41,7 @@ export default function Home() {
       {/* Portoflio Section */}
       <div className="shrink-0">
         <div className="border-l h-full w-px border-neutral-300 border-dashed absolute top-0 bottom-0" />
-        <div className="pl-8 pr-40 flex gap-24 items-start h-full">
+        <div className="pl-8 pr-24 md:pr-40 flex gap-24 items-start h-full">
           <BracketText
             position="before:bottom-2 after:top-2"
             className="[writing-mode:vertical-lr] rotate-180"
@@ -60,7 +60,7 @@ export default function Home() {
       {/* Experience Section */}
       <div className="shrink-0">
         <div className="border-l h-full w-px border-neutral-300 border-dashed absolute top-0 bottom-0" />
-        <div className="pl-8 pr-40 flex gap-24 items-start h-full">
+        <div className="pl-8 pr-24 md:pr-40 flex gap-24 items-start h-full">
           <BracketText
             position="before:bottom-2 after:top-2"
             className="[writing-mode:vertical-lr] rotate-180"
