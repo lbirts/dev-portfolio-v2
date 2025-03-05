@@ -101,7 +101,7 @@ export default function Footer() {
             <BracketText hoverEnabled={false} fontSize="text-base">
               <input
                 placeholder="YOUREMAIL@EXAMPLE.COM"
-                className="!outline-0 uppercase"
+                className="!outline-0 uppercase w-51"
                 value={formData.email}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -112,11 +112,11 @@ export default function Footer() {
               hoverEnabled={false}
               fontSize="text-6xl"
               fontWeight="before:font-thin after:font-thin"
-              position="before:-left-2 md:before:left-1 after:-right-5"
+              position="before:-left-1.5 after:-right-5"
             >
               <textarea
                 placeholder="MESSAGE"
-                className="text-base !outline-0 -mr-10"
+                className="text-base !outline-0 -mr-10 w-51"
                 value={formData.message}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
