@@ -25,7 +25,7 @@ export const experienceData: ExperienceType[] = [
     discipline: "FULL STACK - FREELANCE",
     date: "MAR 2023 - MAR 2024",
     description:
-      "Navigated the complex landscape of B2B sales technology, bridging the gap between engineering excellence and business outcomes. Served as a technical mentor across teams while championing clean code principles and scalable architecture patterns. Advocated for data-driven decision making, transforming business requirements into elegant technical solutions during a period of rapid company growth.",
+      "Navigated the complex landscape of B2B sales technology, bridging the gap between engineering excellence and business outcomes. Championing clean code principles and scalable architecture patterns. Advocated for data-driven decision making, transforming business requirements into elegant technical solutions.",
     achievements: [
       "Led a comprehensive tech stack modernization that slashed technical debt by 50% while elevating system performance by 30%",
       "Pioneered ML-powered lead qualification algorithms that enhanced prospect targeting accuracy by 25%",
@@ -37,7 +37,7 @@ export const experienceData: ExperienceType[] = [
     discipline: "SWIFT, REACT NATIVE",
     date: "AUG 2021 - SEPT 2022",
     description:
-      "Thrived in the high-stakes world of sports betting technology, where milliseconds matter and user experience directly impacts revenue. Balanced native performance with cross-platform efficiency while navigating complex regulatory requirements. Pioneered inclusive design practices within the mobile team, fostering a culture where accessibility was considered from the earliest stages of feature development.",
+      "Thrived in the high-stakes world, where milliseconds matter and user experience directly impacts revenue. Balanced native performance with cross-platform efficiency while navigating complex regulatory requirements. Pioneered inclusive design practices within the mobile team, fostering a culture where accessibility was considered early on.",
     achievements: [
       "Engineered a scaleable native architecture framework that accelerated mobile product launches by 25%",
       "Championed digital inclusion by implementing accessibility standards that improved usability for diverse users by 35%",

@@ -34,7 +34,7 @@ export default function Home() {
             forward-thinking architectures.
           </p>
         </div>
-        <div className="md:hidden flex gap-1 animate-bounce">Scroll Horizontally <HiArrowLongRight className="w-10 h-6"/></div>
+        <div className="sm:hidden flex gap-1 animate-bounce">Scrolls Horizontally <HiArrowLongRight className="w-10 h-6"/></div>
         <Socials />
       </div>
 
