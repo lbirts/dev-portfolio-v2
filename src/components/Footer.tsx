@@ -112,7 +112,7 @@ export default function Footer() {
               hoverEnabled={false}
               fontSize="text-6xl"
               fontWeight="before:font-thin after:font-thin"
-              position="before:left-1 after:-right-5"
+              position="before:-left-2 md:before:left-1 after:-right-5"
             >
               <textarea
                 placeholder="MESSAGE"

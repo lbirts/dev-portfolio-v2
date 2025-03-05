@@ -31,7 +31,7 @@ export default function BracketText({
       className={classNames(
         "flex items-center before:relative after:relative before:duration-200 after:duration-200",
         {
-          ["hover:before:left-0 hover:after:right-0 cursor-pointer"]:
+          ["hover:before:left-0 hover:after:right-0 active:before:left-0 active:after:right-0 cursor-pointer"]:
             hoverEnabled,
         },
         fontWeight,
