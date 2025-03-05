@@ -21,28 +21,11 @@ export default function Footer() {
   const [error, setError] = useState<string>("");
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
-  const handleSubmit = async () => {
-    setError("");
+  const sendEmail = async (token: string | null) => {
     const recaptchaContainer = recaptchaRef.current;
 
-    if (!formData.email || !formData.message) {
-      setError("Please fill in all fields.");
-      return;
-    }
-
-    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    if (!regex.test(formData.email)) {
-      setError("Please enter a valid email.");
-      return;
-    }
-
-    setLoading(true);
-
     try {
-      const captchaToken = recaptchaContainer?.getValue();
-
-      if (!captchaToken) {
+      if (!token && loading) {
         setLoading(false);
         setError("Please complete the reCAPTCHA.");
         return;
@@ -51,7 +34,7 @@ export default function Footer() {
       const templateParams = {
         from_email: formData.email,
         message: formData.message,
-        "g-recaptcha-response": captchaToken,
+        "g-recaptcha-response": token,
       };
 
       emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string);
@@ -67,6 +50,24 @@ export default function Footer() {
       setError("An error occurred while sending.");
       setLoading(false);
     }
+  };
+
+  const handleSubmit = async () => {
+    setError("");
+
+    if (!formData.email || !formData.message) {
+      setError("Please fill in all fields.");
+      return;
+    }
+
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!regex.test(formData.email)) {
+      setError("Please enter a valid email.");
+      return;
+    }
+
+    setLoading(true);
   };
 
   return (
@@ -135,10 +136,11 @@ export default function Footer() {
             </BracketText>
           </div>
 
-          {process.env.NODE_ENV === "production" && (
+          {loading && (
             <ReCAPTCHA
               ref={recaptchaRef}
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+              onChange={sendEmail}
               size="normal"
             />
           )}
