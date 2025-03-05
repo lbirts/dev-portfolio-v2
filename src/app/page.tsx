@@ -6,8 +6,9 @@ import PortfolioItem from "@/components/PortfolioItem";
 import Socials from "@/components/Socials";
 import { experienceData, ExperienceType } from "@/utils/experience";
 import { portfolioData, PortfolioType } from "@/utils/portfolio";
-import { Download } from "lucide-react";
 import Link from "next/link";
+import { HiArrowLongRight } from "react-icons/hi2";
+import { LuDownload } from "react-icons/lu";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
             forward-thinking architectures.
           </p>
         </div>
+        <div className=" flex gap-4">Scroll Horizontally <HiArrowLongRight /></div>
         <Socials />
       </div>
 
@@ -74,7 +76,7 @@ export default function Home() {
                 className="flex justify-end gap-2"
               >
                 DOWNLOAD MY RESUME
-                <Download className="h-3 w-3" />
+                <LuDownload className="h-3 w-3" />
               </Link>
             </BracketText>
             <div className="flex gap-10 self-center items-end">

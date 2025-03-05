@@ -3,9 +3,9 @@
 import BracketText from "@/components/BracketText";
 import Socials from "@/components/Socials";
 import emailjs from "@emailjs/browser";
-import { CheckCheck } from "lucide-react";
 import { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import { LuCheckCheck } from "react-icons/lu";
 import { SyncLoader } from "react-spinners";
 
 export default function Footer() {
@@ -128,7 +128,7 @@ export default function Footer() {
               {loading ? (
                 <SyncLoader size={5} />
               ) : success ? (
-                <CheckCheck />
+                <LuCheckCheck />
               ) : (
                 <p>SEND</p>
               )}

@@ -1,7 +1,7 @@
 import BracketText from "@/components/BracketText";
-import { Linkedin, Mail } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import { BsLinkedin, BsTwitterX } from "react-icons/bs";
+import { MdMail } from "react-icons/md";
 
 export default function Socials() {
   return (
@@ -11,7 +11,7 @@ export default function Socials() {
         fontSize="text-2xl"
       >
         <Link href="https://linkedin.com/in/lauren-birts" target="_blank">
-          <Linkedin className="h-5 w-5" />
+          <BsLinkedin className="h-5 w-5" />
         </Link>
       </BracketText>
 
@@ -20,13 +20,7 @@ export default function Socials() {
         fontSize="text-2xl"
       >
         <Link href="https://github.com/lbirts" target="_blank">
-          <Image
-            alt="github logo"
-            height={16}
-            width={16}
-            src="https://cdn.simpleicons.org/github/black?viewbox=auto"
-            draggable="false"
-          />
+          <BsTwitterX className="h-5 w-5" />
         </Link>
       </BracketText>
 
@@ -35,7 +29,7 @@ export default function Socials() {
         fontSize="text-2xl"
       >
         <Link href="mailto:birtslauren@gmail.com">
-          <Mail className="h-5 w-5" />
+          <MdMail className="h-5 w-5" />
         </Link>
       </BracketText>
     </div>
