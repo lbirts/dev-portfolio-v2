@@ -1,6 +1,6 @@
 import BracketText from "@/components/BracketText";
 import Link from "next/link";
-import { BsLinkedin, BsTwitterX } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { MdMail } from "react-icons/md";
 
 export default function Socials() {
@@ -20,7 +20,7 @@ export default function Socials() {
         fontSize="text-2xl"
       >
         <Link href="https://github.com/lbirts" target="_blank">
-          <BsTwitterX className="h-5 w-5" />
+          <BsGithub className="h-5 w-5" />
         </Link>
       </BracketText>
 
