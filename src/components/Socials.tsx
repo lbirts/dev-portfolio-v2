@@ -24,7 +24,7 @@ export default function Socials() {
             alt="github logo"
             height={16}
             width={16}
-            src={`https://cdn.simpleicons.org/github/black?viewbox=auto"`}
+            src="https://cdn.simpleicons.org/github/black?viewbox=auto"
             draggable="false"
           />
         </Link>
