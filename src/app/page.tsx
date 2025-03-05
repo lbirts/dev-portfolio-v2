@@ -79,7 +79,7 @@ export default function Home() {
                 <LuDownload className="h-3 w-3" />
               </Link>
             </BracketText>
-            <div className="flex gap-10 self-center items-end">
+            <div className="flex gap-20 self-center items-end">
               {experienceData.map((experience: ExperienceType, i: number) => (
                 <ExperienceItem key={i} data={experience} />
               ))}
