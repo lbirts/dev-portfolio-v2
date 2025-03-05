@@ -3,7 +3,7 @@
 import BracketText from "@/components/BracketText";
 import Socials from "@/components/Socials";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { LuCheckCheck } from "react-icons/lu";
 import { SyncLoader } from "react-spinners";
@@ -20,6 +20,14 @@ export default function Footer() {
   const [success, setSuccess] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
   const recaptchaRef = useRef<ReCAPTCHA>(null);
+
+  useEffect(() => {
+    if (success) {
+      setTimeout(() => {
+        setSuccess(false);
+      }, 5000);
+    }
+  }, [success]);
 
   const sendEmail = async (token: string | null) => {
     const recaptchaContainer = recaptchaRef.current;
