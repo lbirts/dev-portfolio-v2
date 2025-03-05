@@ -4,7 +4,7 @@ import BracketText from "@/components/BracketText";
 import Socials from "@/components/Socials";
 import emailjs from "@emailjs/browser";
 import { CheckCheck } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { SyncLoader } from "react-spinners";
 
@@ -19,11 +19,11 @@ export default function Footer() {
   const [loading, setLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean>(false);
   const [error, setError] = useState<string>("");
-  const recaptchaRef = useRef(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async () => {
     setError("");
-    const recaptchaContainer: any = recaptchaRef.current;
+    const recaptchaContainer = recaptchaRef.current;
 
     if (!formData.email || !formData.message) {
       setError("Please fill in all fields.");
@@ -87,9 +87,9 @@ export default function Footer() {
             <p>REN</p>
           </div>
           <p className="font-sans text-sm max-w-md text-neutral-500">
-            Have questions? Want to chat? I'm just an email away! Let's connect
+            Have questions? Want to chat? I&apos;m just an email away! Let&apos;s connect
             and see how we can build something amazing together. Whether you
-            have a project in mind or just want to talk tech, I'm always up for
+            have a project in mind or just want to talk tech, I&apos;m always up for
             a good conversation about coding, innovation, or the next big thing.
           </p>
           <Socials />

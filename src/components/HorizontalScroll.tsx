@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ReactNode, useEffect, useRef } from "react";
 
 interface Props {
@@ -9,19 +9,6 @@ interface Props {
 
 export default function HorizontalScroll({ children }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  // Set up scrolling with Framer Motion
-  const { scrollYProgress } = useScroll({
-    container: containerRef,
-  });
-
-  // Calculate the translation based on the content width
-  const x = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ["0%", "-80%"] // Adjust the percentage based on your content width
-  );
 
   // Set up wheel event handler to convert all scrolling to horizontal
   useEffect(() => {
@@ -58,7 +45,7 @@ export default function HorizontalScroll({ children }: Props) {
         overscrollBehaviorX: "none", // Prevent overscroll bounce
       }}
     >
-      <motion.div ref={contentRef} className="flex py-20 h-full px-10 w-max">
+      <motion.div className="flex py-20 h-full px-10 w-max">
         {children}
       </motion.div>
     </div>

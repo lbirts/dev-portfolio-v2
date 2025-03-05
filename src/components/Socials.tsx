@@ -1,5 +1,6 @@
 import BracketText from "@/components/BracketText";
 import { Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Socials() {
@@ -19,7 +20,8 @@ export default function Socials() {
         fontSize="text-2xl"
       >
         <Link href="https://github.com/lbirts" target="_blank">
-          <img
+          <Image
+            alt="github logo"
             height={16}
             width={16}
             src={`https://cdn.simpleicons.org/github/black?viewbox=auto"`}

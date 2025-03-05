@@ -17,16 +17,16 @@ export default function Home() {
         <div className="space-y-3">
           <p className="text-2xl">LAUREN BIRTS</p>
           <p className="font-sans text-sm max-w-lg text-neutral-500">
-            I'm a senior software engineer with extensive experience building
+            I&apos;m a senior software engineer with extensive experience building
             innovative, user-focused applications across multiple platforms. I
             specialize in performance optimization while balancing technical
             elegance with pragmatic delivery. My background spans full-stack
             development, mobile engineering, and blockchain systems.
           </p>
           <p className="font-sans text-sm max-w-lg text-neutral-500">
-            I'm passionate about creating secure, accessible technology and
+            I&apos;m passionate about creating secure, accessible technology and
             continuously expanding my technical toolkit to deliver impactful
-            solutions. I've focused on transforming complex technical challenges
+            solutions. I&apos;ve focused on transforming complex technical challenges
             into elegant solutions that drive business value. I thrive in
             collaborative environments where I can apply my diverse skill set to
             modernize legacy systems, enhance user experiences, and implement
