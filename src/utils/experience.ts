@@ -22,8 +22,8 @@ export const experienceData: ExperienceType[] = [
   {
     title: "SENIOR SOFTWARE ENGINEER",
     company: "REVBOSS",
-    discipline: "FULL STACK - FREELANCE",
-    date: "MAR 2023 - MAR 2024",
+    discipline: "FULL STACK",
+    date: "AUG 2021 - SEPT 2022",
     description:
       "Navigated the complex landscape of B2B sales technology, bridging the gap between engineering excellence and business outcomes. Championing clean code principles and scalable architecture patterns. Advocated for data-driven decision making, transforming business requirements into elegant technical solutions.",
     achievements: [
@@ -35,7 +35,7 @@ export const experienceData: ExperienceType[] = [
     title: "MOBILE ENGINEER",
     company: "FANDUEL",
     discipline: "SWIFT, REACT NATIVE",
-    date: "AUG 2021 - SEPT 2022",
+    date: "DEC 2020 - AUG 2021",
     description:
       "Thrived in the high-stakes world, where milliseconds matter and user experience directly impacts revenue. Balanced native performance with cross-platform efficiency while navigating complex regulatory requirements. Pioneered inclusive design practices within the mobile team, fostering a culture where accessibility was considered early on.",
     achievements: [
@@ -47,7 +47,7 @@ export const experienceData: ExperienceType[] = [
     title: "SOFTWARE ENGINEER",
     company: "FANDUEL",
     discipline: "FRONTEND",
-    date: "JAN 2020 - AUG 2021",
+    date: "OCT 2019 - DEC 2020",
     description:
       "Joined during a period of rapid user growth, crafting intuitive interfaces that handled complex betting scenarios while maintaining performance during high-traffic sporting events. Participated in the evolution of the design system during a major brand refresh, ensuring visual consistency across multiple products. Embraced the challenge of real-time data visualization, creating engaging user experiences that simplified complex betting options for users of all experience levels.",
     achievements: [
