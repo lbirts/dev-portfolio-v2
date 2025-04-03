@@ -34,18 +34,19 @@ export default function PortfolioItem({ data }: Props) {
           </div>
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex gap-4">
           {data.links &&
             data.links.length > 0 &&
             data.links.map((link, index) => (
-              <div className="flex gap-2" key={index}>
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  className="underline dotted"
-                >
-                  {link.name}
-                </Link>
+              <div className="flex gap-4" key={index}>
+                <BracketText fontSize="text-base">
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                  >
+                    {link.name}
+                  </Link>
+                </BracketText>
                 {data.links && index < data.links.length - 1 && <p>|</p>}
               </div>
             ))}
