@@ -1,14 +1,35 @@
+type Link = {
+    name: string;
+    href: string;
+}
+
 export type PortfolioType = {
     technologies: string[];
     title: string;
     description: string;
-    demoLink?: string;
-    gitHubLink?: string;
     imageSrc: string;
     width: string;
+    links?: Link[];
 }
 
 export const portfolioData: PortfolioType[] = [
+    {
+        technologies: ["NEXT.JS", "TAILWIND CSS", "TYPESCRIPT"],
+        title: "THE NOTHING TIMER",
+        description: "A minimalist meditation app that promotes digital stillness in our hyperconnected world. Built with Next.js and TypeScript, The Nothing Timer features a clean component architecture with independent timer elements, ambient visuals, and movement detection that operate in synchronized state. React hooks manage idle sessions and meditation phase transitions, while Tailwind CSS delivers responsive design that adapts seamlessly across all device sizes to help users reclaim moments of doing nothing.",
+        imageSrc: "/do-nothing.webp",
+        width: "w-120",
+        links: [
+            {
+                name: "Demo",
+                href: "https://nothing.laurenbirts.dev"
+            },
+            {
+                name: "Code",
+                href: "https://github.com/lbirts/do-nothing"
+            }
+        ]
+    },
     {
         technologies: ["SWIFT", "CLOUDKIT", "OURA CLOUD", "COREDATA"],
         title: "SLEEP BIOMETRIC TRACKER",

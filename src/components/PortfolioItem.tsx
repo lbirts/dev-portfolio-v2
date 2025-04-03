@@ -23,7 +23,7 @@ export default function PortfolioItem({ data }: Props) {
             width={0}
             height={0}
             className={classNames(
-              "h-auto rounded-2xl group-hover:blur-xs group-active:blur-xs duration-200",
+              "h-auto group-hover:blur-xs group-active:blur-xs duration-200",
               data.width
             )}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -35,17 +35,20 @@ export default function PortfolioItem({ data }: Props) {
         </div>
 
         <div className="flex gap-2">
-          {data.demoLink && (
-            <Link href={data.demoLink} target="_blank" className="underline">
-              Demo
-            </Link>
-          )}
-          {data.demoLink && data.gitHubLink && <p>|</p>}
-          {data.gitHubLink && (
-            <Link href={data.gitHubLink} target="_blank" className="underline">
-              Code
-            </Link>
-          )}
+          {data.links &&
+            data.links.length > 0 &&
+            data.links.map((link, index) => (
+              <div className="flex gap-2" key={index}>
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  className="underline dotted"
+                >
+                  {link.name}
+                </Link>
+                {data.links && index < data.links.length - 1 && <p>|</p>}
+              </div>
+            ))}
         </div>
       </div>
     </div>
