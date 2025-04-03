@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
 import BracketText from "@/components/BracketText";
+import Link from "next/link";
 
 export default function Header() {
   const scrollToContact = () => {
@@ -19,9 +20,16 @@ export default function Header() {
         <div className="h-px bg-black w-10" />
         <p>REN</p>
       </div>
-      <BracketText onClick={scrollToContact}>
-        <p>CONTACT</p>
-      </BracketText>
+      <div className="flex gap-8">
+        <BracketText>
+          <Link href="https://github.com/lbirts/dev-portfolio-v2" target="_blank">
+            <p>REPO</p>
+          </Link>
+        </BracketText>
+        <BracketText onClick={scrollToContact}>
+          <p>CONTACT</p>
+        </BracketText>
+      </div>
     </header>
   );
 }
