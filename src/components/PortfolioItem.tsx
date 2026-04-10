@@ -9,6 +9,8 @@ interface Props {
 }
 
 export default function PortfolioItem({ data }: Props) {
+  const hasImage = Boolean(data.imageSrc);
+
   return (
     <div className="flex flex-col justify-start gap-2">
       <BracketText className="ml-2 font-light" hoverEnabled={false}>
@@ -17,21 +19,34 @@ export default function PortfolioItem({ data }: Props) {
       <p className="text-neutral-500 text-lg">{data.title}</p>
       <div className="space-y-2">
         <div className="relative group p-1">
-          <Image
-            src={data.imageSrc}
-            alt={data.title}
-            width={0}
-            height={0}
-            className={classNames(
-              "h-auto group-hover:blur-xs group-active:blur-xs duration-200",
-              data.width
-            )}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority
-          />
-          <div className="bg-white/0 absolute px-4 top-0 bottom-0 left-0 right-0 rounded-2xl bg-opac group-hover:bg-white/50 group-active:bg-white/50 opacity-0 group-hover:opacity-100 group-active:opacity-100 duration-200 flex items-center justify-center font-sans">
-            <p>{data.description}</p>
-          </div>
+          {hasImage ? (
+            <>
+              <Image
+                src={data.imageSrc as string}
+                alt={data.title}
+                width={0}
+                height={0}
+                className={classNames(
+                  "h-auto group-hover:blur-xs group-active:blur-xs duration-200",
+                  data.width
+                )}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
+              />
+              <div className="bg-white/0 absolute px-4 top-0 bottom-0 left-0 right-0 rounded-2xl bg-opac group-hover:bg-white/50 group-active:bg-white/50 opacity-0 group-hover:opacity-100 group-active:opacity-100 duration-200 flex items-center justify-center font-sans">
+                <p>{data.description}</p>
+              </div>
+            </>
+          ) : (
+            <div
+              className={classNames(
+                "rounded-2xl border border-neutral-200 bg-neutral-50 px-4 py-6",
+                data.width ?? "w-96"
+              )}
+            >
+              <p className="text-neutral-600 text-sm">{data.description}</p>
+            </div>
+          )}
         </div>
 
         <div className="flex gap-4">

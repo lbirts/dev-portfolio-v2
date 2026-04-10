@@ -7,8 +7,8 @@ export type PortfolioType = {
     technologies: string[];
     title: string;
     description: string;
-    imageSrc: string;
-    width: string;
+    imageSrc?: string;
+    width?: string;
     links?: Link[];
 }
 
@@ -57,5 +57,17 @@ export const portfolioData: PortfolioType[] = [
         description: "A distinctive website showcasing a marketing firm's capabilities and client success stories. The site features subtle animations and responsive design elements that highlight the firm's creative approach. Built with TypeScript for reliability and Tailwind CSS for consistent styling, the architecture supports quick updates while maintaining visual coherence. The site serves as both a portfolio of past work and a demonstration of the firm's design sensibilities.",
         imageSrc: "/marketing-portfolio.webp",
         width: "w-96"
+    },
+    {
+        technologies: ["FRONTEND", "REACT", "TYPESCRIPT", "NEXT.JS", "WEBSOCKETS", "AI/ML"],
+        title: "PROFESSIONAL PROJECT CASE STUDIES",
+        description:
+            "A password-protected page containing highlights from contract frontend work across coaching dashboards, B2B live chat, Web3 security, and AI-powered lead management.",
+        links: [
+            {
+                name: "View Case Studies",
+                href: "/professional-project-case-studies",
+            },
+        ],
     }
 ];
