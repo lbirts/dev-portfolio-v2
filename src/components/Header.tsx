@@ -15,11 +15,11 @@ export default function Header() {
 
   return (
     <header className="flex justify-between p-4 fixed w-full z-10 bg-white">
-      <div className="flex gap-1 items-center text-sm">
+      <Link href="/" className="flex gap-1 items-center text-sm group">
         <p>LAU</p>
-        <div className="h-px bg-black w-10" />
+        <div className="h-px bg-black group-hover:w-8 w-10 transition-all" />
         <p>REN</p>
-      </div>
+      </Link>
       <div className="flex gap-8">
         <BracketText>
           <Link
