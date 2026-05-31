@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const password = typeof body?.password === "string" ? body.password : "";
 
-    const expectedPassword = "test";
+    const expectedPassword = process.env.PORTFOLIO_CASE_STUDY_PASSWORD;
     if (!expectedPassword) {
       return NextResponse.json(
         {
