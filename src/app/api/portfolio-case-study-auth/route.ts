@@ -5,7 +5,7 @@ export async function POST(req: Request) {
     const body = await req.json();
     const password = typeof body?.password === "string" ? body.password : "";
 
-    const expectedPassword = process.env.PORTFOLIO_CASE_STUDY_PASSWORD;
+    const expectedPassword = "test";
     if (!expectedPassword) {
       return NextResponse.json(
         {
@@ -13,12 +13,15 @@ export async function POST(req: Request) {
           error:
             "Case study password is not configured. Set PORTFOLIO_CASE_STUDY_PASSWORD.",
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
     if (password !== expectedPassword) {
-      return NextResponse.json({ ok: false, error: "Incorrect password." }, { status: 401 });
+      return NextResponse.json(
+        { ok: false, error: "Incorrect password." },
+        { status: 401 },
+      );
     }
 
     const res = NextResponse.json({ ok: true });
@@ -32,7 +35,9 @@ export async function POST(req: Request) {
 
     return res;
   } catch {
-    return NextResponse.json({ ok: false, error: "Invalid request." }, { status: 400 });
+    return NextResponse.json(
+      { ok: false, error: "Invalid request." },
+      { status: 400 },
+    );
   }
 }
-

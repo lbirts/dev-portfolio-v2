@@ -8,7 +8,11 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { LuCheckCheck } from "react-icons/lu";
 import { SyncLoader } from "react-spinners";
 
-export default function Footer() {
+export default function Footer({
+  orientation = "horizontal",
+}: {
+  orientation?: "horizontal" | "vertical";
+}) {
   const [formData, setFormData] = useState<{
     email: string;
     message: string;
@@ -79,12 +83,25 @@ export default function Footer() {
   };
 
   return (
-    <footer className="shrink-0" id="contact">
-      <div className="border-l h-full w-px border-neutral-300 border-dashed absolute top-0 bottom-0" />
-      <div className="pl-8 pr-8 md:pr-40 flex gap-24 items-start h-full">
+    <footer
+      className={`shrink-0 ${orientation === "vertical" ? "relative" : ""}`}
+      id="contact"
+    >
+      <div
+        className={`border-neutral-300 border-dashed absolute ${orientation === "horizontal" ? "border-l top-0 bottom-0 w-px h-full" : "border-b h-px w-full"}`}
+      />
+      <div
+        className={`flex ${orientation === "horizontal" ? "items-start h-full pl-8 pr-8 md:pr-40 gap-24" : "pt-8 flex-col gap-8 px-8 md:px-24"}`}
+      >
         <BracketText
-          position="before:bottom-2 after:top-2"
-          className="[writing-mode:vertical-lr] rotate-180"
+          position={
+            orientation === "horizontal" ? "before:bottom-2 after:top-2" : ""
+          }
+          className={
+            orientation === "horizontal"
+              ? "[writing-mode:vertical-lr] rotate-180"
+              : ""
+          }
           hoverEnabled={false}
         >
           <p>CONTACT</p>
@@ -96,10 +113,11 @@ export default function Footer() {
             <p>REN</p>
           </div>
           <p className="font-sans text-sm max-w-xs md:max-w-md text-neutral-500">
-            Have questions? Want to chat? I&apos;m just an email away! Let&apos;s connect
-            and see how we can build something amazing together. Whether you
-            have a project in mind or just want to talk tech, I&apos;m always up for
-            a good conversation about coding, innovation, or the next big thing.
+            Have questions? Want to chat? I&apos;m just an email away!
+            Let&apos;s connect and see how we can build something amazing
+            together. Whether you have a project in mind or just want to talk
+            tech, I&apos;m always up for a good conversation about coding,
+            innovation, or the next big thing.
           </p>
           <Socials />
 

@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-between p-4 fixed w-full z-10">
+    <header className="flex justify-between p-4 fixed w-full z-10 bg-white">
       <div className="flex gap-1 items-center text-sm">
         <p>LAU</p>
         <div className="h-px bg-black w-10" />
@@ -22,7 +22,10 @@ export default function Header() {
       </div>
       <div className="flex gap-8">
         <BracketText>
-          <Link href="https://github.com/lbirts/dev-portfolio-v2" target="_blank">
+          <Link
+            href="https://github.com/lbirts/dev-portfolio-v2"
+            target="_blank"
+          >
             <p>REPO</p>
           </Link>
         </BracketText>

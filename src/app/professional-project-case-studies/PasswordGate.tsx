@@ -37,33 +37,31 @@ export default function PasswordGate() {
   };
 
   return (
-    <div className="flex-1 pt-24 pb-28 px-8 md:px-24">
-      <div className="max-w-2xl">
-        <h1 className="text-2xl">Protected Case Studies</h1>
-        <p className="mt-3 text-neutral-500 text-sm">
-          Enter the password to view the contents.
-        </p>
+    <div className="flex-1 flex-col flex mx-auto py-24 px-8 md:px-24 max-w-2xl w-full">
+      <h1 className="text-2xl">Protected Case Studies</h1>
+      <p className="mt-3 text-neutral-500 text-sm">
+        Enter the password to view the contents.
+      </p>
 
-        <form onSubmit={onSubmit} className="mt-8 flex flex-col gap-3">
-          <input
-            type="password"
-            placeholder="PASSWORD"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="!outline-0 rounded-md border border-neutral-300 bg-white px-3 py-2 font-mono text-sm"
-          />
+      <form onSubmit={onSubmit} className="mt-8 flex flex-col gap-3">
+        <input
+          type="password"
+          placeholder="PASSWORD"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="!outline-0 rounded-md border border-neutral-300 bg-white px-3 py-2 font-mono text-sm"
+        />
 
-          {error ? <p className="text-red-500 text-xs">{error}</p> : null}
+        {error ? <p className="text-red-500 text-xs">{error}</p> : null}
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="rounded-md bg-black px-4 py-2 text-white text-sm disabled:opacity-60"
-          >
-            {loading ? "VERIFYING..." : "UNLOCK"}
-          </button>
-        </form>
-      </div>
+        <button
+          type="submit"
+          disabled={loading}
+          className="rounded-md bg-black px-4 py-2 text-white text-sm disabled:opacity-60"
+        >
+          {loading ? "VERIFYING..." : "UNLOCK"}
+        </button>
+      </form>
     </div>
   );
 }
