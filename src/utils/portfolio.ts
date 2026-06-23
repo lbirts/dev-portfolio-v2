@@ -21,6 +21,30 @@ export const portfolioData: PortfolioType[] = [
       "TAILWIND CSS",
       "SHADCN/UI",
     ],
+    title: "WILDCARDS",
+    description:
+      "An Uno-style card game built for groups who want more control over how they play. Before each match, the host picks from configurable house rules so every session can follow a familiar format or something entirely custom. Online, players create a room with a shareable code or join an existing one; offline, the same setup supports pass-and-play with friends on one device. Built with Next.js and TypeScript, Wildcards keeps lobby setup, rule configuration, and in-game turns in a responsive shadcn/ui interface that feels natural on both desktop and mobile.",
+    imageSrc: "/wildcards.webp",
+    width: "w-120",
+    links: [
+      {
+        name: "Demo",
+        href: "https://wildcards.vercel.app",
+      },
+      {
+        name: "Code",
+        href: "https://github.com/lbirts/Wildcards",
+      },
+    ],
+  },
+  {
+    technologies: [
+      "NEXT.JS",
+      "REACT",
+      "TYPESCRIPT",
+      "TAILWIND CSS",
+      "SHADCN/UI",
+    ],
     title: "FOCUSNODE",
     description:
       "A productivity workspace that brings four task-management surfaces together in one cohesive design system. FocusNode combines a draggable Kanban board with swimlanes and priority-tagged cards, a Pomodoro focus timer with a distraction blocker, a daily planner that ranks tasks by priority or time estimate, and a team workload view that groups assignments by category and status. Built with Next.js 16 and React 19 on top of an OKLCH-driven Tailwind v4 token system, the app pairs shadcn/ui primitives with custom components to keep typography, color, and spacing consistent across every view.",
@@ -54,14 +78,6 @@ export const portfolioData: PortfolioType[] = [
         href: "https://github.com/lbirts/do-nothing",
       },
     ],
-  },
-  {
-    technologies: ["SWIFT", "CLOUDKIT", "OURA CLOUD", "COREDATA"],
-    title: "SLEEP BIOMETRIC TRACKER",
-    description:
-      "A health-focused iOS app that converts sleep data into practical insights. The app connects with Oura Cloud to analyze sleep stages, heart rate patterns, and breathing rates. Users receive personalized recommendations to improve their sleep quality based on their biometric data. Clean visualizations help users understand connections between their daily habits and sleep patterns without overwhelming them with technical details.",
-    imageSrc: "/sleep-tracker.webp",
-    width: "w-64",
   },
   {
     technologies: ["NEXT.JS", "D3.JS", "MONGODB", "REDIS"],
